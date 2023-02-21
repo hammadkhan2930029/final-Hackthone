@@ -5,7 +5,10 @@ import { FlatList, ScrollView, TextInput } from "react-native-gesture-handler";
 
 
 
-const Home = () => {
+const Home = ({navigation}) => {
+    const handler = (screenName) =>{
+        navigation.navigate(screenName)
+    }
 
 
     return (
@@ -16,7 +19,9 @@ const Home = () => {
                 <Image style={style.sylani} source={require('../image/sylani.png')} />
 
                 <View>
-                    <Image style={style.cart} source={require('../image/Cart.png')} />
+                    <TouchableOpacity onPress={() => handler('cart')}>
+                        <Image style={style.cart} source={require('../image/Cart.png')} />
+                    </TouchableOpacity>
                 </View>
 
             </View>
@@ -129,7 +134,7 @@ const style = StyleSheet.create({
     h3: {
         paddingLeft: '5%',
         marginTop: -10
-        
+
 
     },
     kg_plue: {
@@ -169,7 +174,7 @@ const style = StyleSheet.create({
         borderRadius: 15,
         padding: 10
     },
-  
+
     h4: {
         paddingLeft: '5%',
         marginTop: 10
@@ -203,7 +208,7 @@ const style = StyleSheet.create({
     },
     horiView: {
         display: 'flex',
-       
+
         margin: 20
 
     },

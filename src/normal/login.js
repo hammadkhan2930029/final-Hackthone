@@ -1,5 +1,6 @@
 import React from "react";
 import { View, SafeAreaView, Text, Image, StyleSheet, TouchableOpacity, TextInput, Dimensions } from "react-native"
+import { firebaseConfig } from "../config";
 
 
 

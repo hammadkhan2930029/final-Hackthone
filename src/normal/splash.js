@@ -17,7 +17,7 @@ const Splash = ({navigation}) => {
 
     }
     return (
-        <SafeAreaView>
+        <SafeAreaView style={{flex:1 , backgroundColor: '#FFFFFF'}}>
             <View style={style.splash}  >
                 <Image style={style.img} source={require("../image/Logo.png")} />
             </View>
